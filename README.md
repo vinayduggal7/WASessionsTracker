@@ -3,7 +3,7 @@ A simple python script to track someone's online sessions on WhatsApp by impleme
 
 -Creates a log of the target's arrival time and session duration.
 
-Libraries/Modules Used:
-  -Time
-  -Selenium
-  -BeautifulSoup
+Modules Used:<br>
+&nbsp; &nbsp; -Time <br>
+&nbsp; &nbsp; -Selenium <br>
+&nbsp; &nbsp; -BeautifulSoup
