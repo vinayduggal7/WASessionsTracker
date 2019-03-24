@@ -37,5 +37,6 @@ while(True):
         log.write("Came online on : "+str(localtime)+"\n")
         log.write("Session Duration: "+str(count)+" seconds\n")
         log.write("------------------------------------------\n")
+        log.close()
         count=0
 
