@@ -3,21 +3,22 @@
 import time
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from playsound import playsound
 
 browser=webdriver.Chrome()
 browser.get('https://web.whatsapp.com')
 
-print("Step 1. Scan the QR Code.\nStep 2. Open up the chat for the person you want to target.\nStep 3. Press Enter.")
-input()
+print("Step 1. Scan the QR Code.\nStep 2. Open up the chat for the person you want to target.\n")
+target=input("Target's Name : ")
 print("Running...\n")
 user_status='offline'
-target='Target'
 while(True):
     soup=BeautifulSoup(browser.page_source,'html.parser')
     temp=soup.find(title='online')
     if str(type(temp))=="<class 'bs4.element.Tag'>":
         user_status=temp.get_text()
     if(user_status=='online'):
+        playsound("alert.mp3")
         count=0
         print(target," is online!\n")
         localtime=time.asctime(time.localtime(time.time()))
