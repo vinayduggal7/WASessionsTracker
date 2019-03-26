@@ -6,4 +6,5 @@ A simple python script to track someone's online sessions on WhatsApp by impleme
 Modules Used:<br>
 &nbsp; &nbsp; -Time <br>
 &nbsp; &nbsp; -Selenium <br>
-&nbsp; &nbsp; -BeautifulSoup
+&nbsp; &nbsp; -BeautifulSoup <br>
+&nbsp; &nbsp; -Playsound
