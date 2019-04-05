@@ -14,10 +14,10 @@ print("Running...\n")
 user_status='offline'
 while(True):
     soup=BeautifulSoup(browser.page_source,'html.parser')
-    temp=soup.find(title='online')
+    temp=soup.find('span',class_='O90ur')
     if str(type(temp))=="<class 'bs4.element.Tag'>":
         user_status=temp.get_text()
-    if(user_status=='online'):
+    if(user_status=='online' or user_status=='typing...'):
         playsound("alert.mp3")
         count=0
         print(target," is online!\n")
@@ -25,7 +25,7 @@ while(True):
         print("Came on : ",localtime) 
         while(True):
             soup=BeautifulSoup(browser.page_source,'html.parser')
-            temp=soup.find(title='online')
+            temp=soup.find('span',class_='O90ur')
             if str(type(temp))!="<class 'bs4.element.Tag'>":
                 user_status='offline'
                 break
