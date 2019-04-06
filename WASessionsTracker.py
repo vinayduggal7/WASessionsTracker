@@ -4,6 +4,7 @@ import time
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from playsound import playsound
+from selenium.webdriver.common.keys import Keys
 
 browser=webdriver.Chrome()
 browser.get('https://web.whatsapp.com')
@@ -22,7 +23,9 @@ while(True):
         count=0
         print(target," is online!\n")
         localtime=time.asctime(time.localtime(time.time()))
-        print("Came on : ",localtime) 
+        print("Came on : ",localtime)
+        textbox=browser.find_element_by_class_name('_2S1VP')
+        textbox.send_keys("```Dhappa!```",Keys.ENTER)
         while(True):
             soup=BeautifulSoup(browser.page_source,'html.parser')
             temp=soup.find('span',class_='O90ur')
