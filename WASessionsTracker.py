@@ -26,6 +26,7 @@ while(True):
         print("Came on : ",localtime)
         #textbox=browser.find_element_by_class_name('_2S1VP')
         #textbox.send_keys("YOUR_TEXT_HERE",Keys.ENTER)
+        #browser.maximize_window()
         while(True):
             soup=BeautifulSoup(browser.page_source,'html.parser')
             temp=soup.find('span',class_='O90ur')
