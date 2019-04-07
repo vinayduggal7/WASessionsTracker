@@ -6,6 +6,10 @@ from selenium import webdriver
 from playsound import playsound
 from selenium.webdriver.common.keys import Keys
 
+def sendText(s):
+    textbox=browser.find_element_by_class_name('_2S1VP')
+    textbox.send_keys(s,Keys.ENTER)
+
 browser=webdriver.Chrome()
 browser.get('https://web.whatsapp.com')
 
@@ -24,9 +28,6 @@ while(True):
         print(target," is online!\n")
         localtime=time.asctime(time.localtime(time.time()))
         print("Came on : ",localtime)
-        #textbox=browser.find_element_by_class_name('_2S1VP')
-        #textbox.send_keys("YOUR_TEXT_HERE",Keys.ENTER)
-        #browser.maximize_window()
         while(True):
             soup=BeautifulSoup(browser.page_source,'html.parser')
             temp=soup.find('span',class_='O90ur')
