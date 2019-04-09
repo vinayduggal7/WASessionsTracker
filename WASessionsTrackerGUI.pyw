@@ -1,5 +1,4 @@
 import sys
-import atexit
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtWidgets import QMainWindow, QLabel, QDialog, QGridLayout, QWidget, QApplication, QLineEdit, QCheckBox, QPushButton 
 from PyQt5.QtCore import QSize, Qt
@@ -123,13 +122,13 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     dialog=QDialog()
     bt=QPushButton("OK",dialog)
-    bt.move(380,73)
+    bt.move(377,70)
     dialog.setFixedSize(QSize(480,120))
     dialog.setWindowTitle("Loading...")
     l1=QLabel("Step 1. Scan the QR Code.",dialog)
-    l1.move(40,35)
+    l1.move(40,33)
     l2=QLabel("Step 2. Open up the chat for the person you want to target.",dialog)
-    l2.move(40,75)
+    l2.move(40,73)
     bt.clicked.connect(mainwin)
     dialog.setWindowFlag(Qt.WindowStaysOnTopHint)
     dialog.show()
