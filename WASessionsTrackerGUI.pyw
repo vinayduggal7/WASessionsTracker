@@ -12,6 +12,10 @@ from selenium.webdriver.common.keys import Keys
 kill_thread=0
 sflag=1
 
+class dialog(QDialog):
+    def closeEvent(self,event):
+        browser.quit()
+
 def sendText(s):
     textbox=browser.find_element_by_class_name('_2S1VP')
     textbox.send_keys(s,Keys.ENTER)
@@ -120,7 +124,7 @@ def mainwin():
 if __name__ == '__main__':
     
     app = QApplication(sys.argv)
-    dialog=QDialog()
+    dialog=dialog()
     bt=QPushButton("OK",dialog)
     bt.move(377,70)
     dialog.setFixedSize(QSize(480,120))
