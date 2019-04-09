@@ -51,13 +51,13 @@ class WASessionsTracker(QMainWindow):
         checkbox.setText('')
 
         targetstatus=QLabel('Status : ',self)
-        targetstatus.setGeometry(70,240,161,16)
+        targetstatus.setGeometry(60,240,201,16)
 
         AT=QLabel('Came on : ',self)
-        AT.setGeometry(70,270,161,16)
+        AT.setGeometry(60,270,201,16)
 
         duration=QLabel('Session Duration : ',self)
-        duration.setGeometry(70,300,161,16)
+        duration.setGeometry(60,300,201,16)
         
         def tracker(target):
             user_status='offline'
