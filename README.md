@@ -7,5 +7,5 @@ Modules Used:<br>
 &nbsp; &nbsp; -Time <br>
 &nbsp; &nbsp; -Selenium <br>
 &nbsp; &nbsp; -BeautifulSoup <br>
-&nbsp; &nbsp; -Playsound
+&nbsp; &nbsp; -Playsound <br>
 &nbsp; &nbsp; -PyQt5 for GUI version
