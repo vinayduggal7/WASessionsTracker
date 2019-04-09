@@ -8,3 +8,4 @@ Modules Used:<br>
 &nbsp; &nbsp; -Selenium <br>
 &nbsp; &nbsp; -BeautifulSoup <br>
 &nbsp; &nbsp; -Playsound
+&nbsp; &nbsp; -PyQt5 for GUI version
