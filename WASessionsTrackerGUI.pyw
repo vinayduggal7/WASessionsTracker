@@ -17,7 +17,7 @@ class dialog(QDialog):
         browser.quit()
 
 def sendText(s):
-    textbox=browser.find_element_by_class_name('_2S1VP')
+    textbox=browser.find_element_by_class_name('_3u328')
     textbox.send_keys(s,Keys.ENTER)
 
 class WASessionsTracker(QMainWindow):
@@ -69,7 +69,7 @@ class WASessionsTracker(QMainWindow):
                 if(kill_thread):
                     break
                 soup=BeautifulSoup(browser.page_source,'html.parser')
-                temp=soup.find('span',class_='O90ur')
+                temp=soup.find('span',class_='_315-i')
                 if str(type(temp))=="<class 'bs4.element.Tag'>":
                     user_status=temp.get_text()
                 if(user_status=='online' or user_status=='typing...'):
@@ -77,12 +77,13 @@ class WASessionsTracker(QMainWindow):
                     targetstatus.setText("Status : "+targetname.text()+" is online!")
                     localtime=time.asctime(time.localtime(time.time()))
                     AT.setText("Came on : "+str(localtime))
+                    duration.setText("Session Duration : ")
                     if(checkbox.isChecked()):
                         sendText(msgbox.text())
                     count=0
                     while(True):
                         soup=BeautifulSoup(browser.page_source,'html.parser')
-                        temp=soup.find('span',class_='O90ur')
+                        temp=soup.find('span',class_='_315-i')
                         if str(type(temp))!="<class 'bs4.element.Tag'>":
                             duration.setText("Session Duration : "+str(count)+" seconds")
                             user_status='offline'

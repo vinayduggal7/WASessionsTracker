@@ -7,7 +7,7 @@ from playsound import playsound
 from selenium.webdriver.common.keys import Keys
 
 def sendText(s):
-    textbox=browser.find_element_by_class_name('_2S1VP')
+    textbox=browser.find_element_by_class_name('_3u328')
     textbox.send_keys(s,Keys.ENTER)
 
 browser=webdriver.Chrome()
@@ -19,7 +19,7 @@ print("Running...\n")
 user_status='offline'
 while(True):
     soup=BeautifulSoup(browser.page_source,'html.parser')
-    temp=soup.find('span',class_='O90ur')
+    temp=soup.find('span',class_='_315-i')
     if str(type(temp))=="<class 'bs4.element.Tag'>":
         user_status=temp.get_text()
     if(user_status=='online' or user_status=='typing...'):
@@ -28,9 +28,10 @@ while(True):
         print(target," is online!\n")
         localtime=time.asctime(time.localtime(time.time()))
         print("Came on : ",localtime)
+        #sendText("```D h a p p a  !!```")
         while(True):
             soup=BeautifulSoup(browser.page_source,'html.parser')
-            temp=soup.find('span',class_='O90ur')
+            temp=soup.find('span',class_='_315-i')
             if str(type(temp))!="<class 'bs4.element.Tag'>":
                 user_status='offline'
                 break
