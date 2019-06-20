@@ -101,6 +101,7 @@ class WASessionsTracker(QMainWindow):
                     
         def startScript():
             global sflag
+            global kill_thread
             if(sflag):
                 t1=Thread(target=tracker,args=(targetname.text(),))
                 targetstatus.setText('Status : Running...')
