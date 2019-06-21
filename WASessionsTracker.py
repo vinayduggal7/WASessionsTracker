@@ -28,7 +28,7 @@ while(True):
         print(target," is online!\n")
         localtime=time.asctime(time.localtime(time.time()))
         print("Came on : ",localtime)
-        #sendText("```D h a p p a  !!```")
+        #sendText("```Automated Text!!```")
         while(True):
             soup=BeautifulSoup(browser.page_source,'html.parser')
             temp=soup.find('span',class_='_315-i')
