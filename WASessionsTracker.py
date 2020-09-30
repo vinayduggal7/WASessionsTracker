@@ -36,14 +36,14 @@ while(True):
                 user_status='offline'
                 break
             count=count+1
-            time.sleep(1)
+            time.sleep(5)
         print("Session Duration: ",count," seconds\n")
         print("------------------------------------------\n")
         log = open("log.txt", "a")
-        log.write("Target : "+str(target)+"\n")
+        log.write("Target :"+str(target)+"\n")
         log.write("Came online on : "+str(localtime)+"\n")
         log.write("Session Duration: "+str(count)+" seconds\n")
-        log.write("------------------------------------------\n")
+        log.write("---------------------------------------\n")
         log.close()
         count=0
 
